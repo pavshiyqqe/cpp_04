@@ -6,19 +6,20 @@
 /*   By: yyaniv <yyaniv@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 16:26:42 by yyaniv            #+#    #+#             */
-/*   Updated: 2025/11/17 14:51:53 by yyaniv           ###   ########.fr       */
+/*   Updated: 2025/11/17 15:20:37 by yyaniv           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal("Dog")
+Dog::Dog()
 {
-    std::cout << "Default constructor of " << this->type << "\n";
+    this->type = "Dog";
     this->_brain = new Brain;
+    std::cout << "Default constructor of " << this->type << "\n";
 }
 
-Dog::Dog(const Dog &other) : Animal("Dog")
+Dog::Dog(const Dog &other)
 {
     std::cout << "Copy-constructor of " << this->type << "\n";
     *this = other;

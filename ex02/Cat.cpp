@@ -6,19 +6,19 @@
 /*   By: yyaniv <yyaniv@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 16:22:14 by yyaniv            #+#    #+#             */
-/*   Updated: 2025/11/17 14:54:03 by yyaniv           ###   ########.fr       */
+/*   Updated: 2025/11/17 15:20:21 by yyaniv           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat")
+Cat::Cat()
 {
-    std::cout << "Default constructor of " << this->type <<  "\n";
+    this->type = "Cat";
     this->_brain = new Brain;
+    std::cout << "Default constructor of " << this->type << "\n";
 }
-
-Cat::Cat(const Cat &other) : Animal("Cat")
+Cat::Cat(const Cat &other)
 {
     std::cout << "Copy-constructor of " << this->type << "\n";
     *this = other;
