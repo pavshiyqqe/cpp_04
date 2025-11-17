@@ -6,7 +6,7 @@
 /*   By: yyaniv <yyaniv@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 16:22:14 by yyaniv            #+#    #+#             */
-/*   Updated: 2025/11/17 14:09:10 by yyaniv           ###   ########.fr       */
+/*   Updated: 2025/11/17 14:54:03 by yyaniv           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,15 @@ Cat::~Cat()
     std::cout << this->type << " was deleted\n";
     delete this->_brain;
 }
+
+
+Cat &   Cat::operator=(const Cat &other)
+{
+    this->type = other.type;
+    *(this->_brain) = *(other._brain);
+    return (*this);
+}
+
 
 Animal  &Cat::operator=(const Animal &other)
 {
