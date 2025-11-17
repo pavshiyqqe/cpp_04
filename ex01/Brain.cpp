@@ -6,7 +6,7 @@
 /*   By: yyaniv <yyaniv@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 13:08:08 by yyaniv            #+#    #+#             */
-/*   Updated: 2025/11/17 13:23:03 by yyaniv           ###   ########.fr       */
+/*   Updated: 2025/11/17 14:39:15 by yyaniv           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ Brain::Brain(const Brain &other)
 
 Brain   &Brain::operator=(const Brain &other)
 {
-    int i = 0;
-    while (i < 100)
-        this->_ideas[i] = other._ideas[i++];
+    int i = -1;
+    while (++i < 100)
+        this->_ideas[i] = other._ideas[i];
     this->_size = other._size;
     return (*this);
 }
