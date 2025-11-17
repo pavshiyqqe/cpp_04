@@ -6,7 +6,7 @@
 /*   By: yyaniv <yyaniv@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 16:14:25 by yyaniv            #+#    #+#             */
-/*   Updated: 2025/11/15 16:23:34 by yyaniv           ###   ########.fr       */
+/*   Updated: 2025/11/17 14:10:46 by yyaniv           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <string>
+#include "Brain.hpp"
 
 class Animal 
 {
@@ -27,6 +28,7 @@ class Animal
         const std::string   &getType() const;
         void                setType(const std::string &type);
         virtual void        makeSound() const;
+        virtual Brain       *getBrain() const = 0;
 
     protected:
         std::string type;
